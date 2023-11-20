@@ -634,7 +634,7 @@ This link takes you to \href{google.com}{google}!
 
 
 \begin{frame}[fragile]
-    \frametitle{Some quality-of-life commands}
+    \frametitle{Some quality-of-life macros}
     Remove all hyphenation:
     \begin{lstlisting}
 \tolerance=1
@@ -652,7 +652,7 @@ This link takes you to \href{google.com}{google}!
 
 
 \begin{frame}[fragile]
-    \frametitle{Some chemical quality-of-life commands}
+    \frametitle{Some chemical quality-of-life macros}
     \begin{lstlisting}
     \newcommand{\via}{\textit{via }}
     \newcommand{\snX}[1]{S\textsubscript{N}#1}
@@ -671,7 +671,7 @@ This link takes you to \href{google.com}{google}!
 
 
 \begin{frame}[fragile]
-    \frametitle{Making your own commands}
+    \frametitle{Making your own macros}
     If you find yourself writing something lots of times, maybe consider making a command that will do it simply and quickly \\
     Making your own commands is simple!
 
@@ -690,6 +690,32 @@ This link takes you to \href{google.com}{google}!
 \renewcommand{\hello}[1]{Hi [#1]! How you doinnnn.}
     \end{lstlisting}
 \end{frame}
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Inheritance in \LaTeX} \pause
+    \begin{itemize}
+    \item Object-oriented languages like Java or Python pass information contained in a parent class to a child class \pause
+    \item {\LaTeX} is a macro-based language, so classes aren't the same, but inheritance can still be passed from a parent \verb|.tex| to a child\verb|.tex| \pause
+    \item Use \verb|\include{PATH_TO_FILE/name.tex}| \pause
+    \item Packages and user-defined commands (functions) in the parent file are passed to the child, but child classes pass none of this information to the parent file \\ \pause
+    Example:
+    \begin{lstlisting}
+        \title{Thesis.tex}
+        ...
+        \begin{document}
+        \include{Introduction.tex}
+        \include{Results-and-discussion.tex}
+        \include{Conclusion.tex}
+        \include{Experimental.tex}
+        ...
+    \end{lstlisting}
+    \end{itemize}
+\end{frame}
+
+
+
 
 
 

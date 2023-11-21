@@ -1,0 +1,18 @@
+\frametitle{Inheritance in \LaTeX} \pause
+    \begin{itemize}
+    \item Object-oriented languages like Java or Python pass information contained in a parent class to a child class \pause
+    \item {\LaTeX} is a macro-based language, so classes aren't the same, but inheritance can still be passed from a parent \verb|.tex| to a child\verb|.tex| \pause
+    \item Use \verb|\include{PATH_TO_FILE/name.tex}| \pause
+    \item Packages and user-defined commands (functions) in the parent file are passed to the child, but child classes pass none of this information to the parent file \\ \pause
+    Example:
+    \begin{lstlisting}
+        \title{Thesis.tex}
+        ...
+        \begin{document}
+        \include{Introduction.tex}
+        \include{Results-and-discussion.tex}
+        \include{Conclusion.tex}
+        \include{Experimental.tex}
+        ...
+    \end{lstlisting}
+    \end{itemize}

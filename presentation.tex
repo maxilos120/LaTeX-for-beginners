@@ -6,6 +6,23 @@
 \usepackage{mhchem}
 \usepackage{xcolor}
 \usepackage{chemstyle}
+\usepackage{tikz}
+\usepackage{xstring}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz-3dplot}
+\usepackage{ifthen}
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+
+\usetikzlibrary{math}
+\usetikzlibrary{fit,positioning}
+
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -354,6 +371,33 @@ sizing options:
 \end{figure}
     \end{lstlisting}
 \end{frame}
+
+
+
+
+
+\begin{frame}
+    \frametitle{Images with Ti\textit{k}Z}
+    Ti\textit{k}Z provides libraries for making graphics in {\LaTeX} \\ \pause
+
+    \begin{columns}[t]
+    \column{0.3\textwidth}
+    \centering
+    \include{tikz-images/vector-field.tex} \pause
+    \include{tikz-images/machine-learning-model.tex} \pause
+    \column{0.3\textwidth}
+    \centering
+    \include{tikz-images/high-entropy-alloy.tex} \pause
+    \include{tikz-images/em-wave.tex} \pause
+    \column{0.3\textwidth}
+    \centering
+    \include{tikz-images/bose-einstein-dist-3d.tex} \pause
+    \include{tikz-images/inverting-operational-amiplifier.tex}
+    \end{columns}
+\end{frame}
+
+
+
 
 
 
@@ -725,7 +769,7 @@ This link takes you to \href{google.com}{google}!
 \item If you have any questions, ask!
 \item \href{overleaf.com}{Overleaf} have some really great tutorials on all things {\LaTeX} -- I often find myself on overleaf when I've forgotten how to do something
 \item Read the documentation -- normally provides excess information, but you can learn a lot of new (useful) commands that make your life easy!
-\item If you have a problem, try google -- 99 times in 100, someone else has had the same problem as you. Smart people on StackExchange, overleaf, and \LaTeX forums will provide great solutions, and even smarter people write packages to solve these issues!
+\item If you have a problem, try google -- 99 times in 100, someone else has had the same problem as you. Smart people on StackExchange, overleaf, and {\LaTeX} forums will provide great solutions, and even smarter people write packages to solve these issues!
 \end{itemize}
 \end{frame}
 
